@@ -8,6 +8,22 @@ import { Component, OnInit } from '@angular/core';
 export class ProductDetailsComponent implements OnInit {
 
   selectedTab: any = "description";
+  selectedColor: string = "Black";
+  selectedSize: string = "XS";
+
+  colors: any = [
+    { name: "Black", code: "#000" },
+    { name: "Red", code: "#ff0000" },
+    { name: "Gray", code: "#008000" },
+  ]
+
+  sizes: any = [
+    { name: "XS" },
+    { name: "S" },
+    { name: "M" },
+    { name: "L" },
+    { name: "XL" },
+  ]
 
   constructor() { }
 
@@ -16,6 +32,14 @@ export class ProductDetailsComponent implements OnInit {
 
   onTabChange(tab: any) {
     this.selectedTab = tab;
+  }
+
+  onColorChange(color: string) {
+    this.selectedColor = color;
+  }
+
+  onSizeChange(size: string) {
+    this.selectedSize = size;
   }
 
 }

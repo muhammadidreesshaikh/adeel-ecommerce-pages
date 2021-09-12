@@ -1,40 +1,73 @@
 <div class="product">
   <div class="container">
-    <div class="row justify-content-center">
-
-      <div class="col-12 col-md-6 col-lg-8">
-        <div class="inner justify-content-center">
+    <div class="row ">
+      <div class="col-12 col-md-6 col-lg-5">
+        <div class="inner ">
           <img src="../../../assets/img/img1.jpg">
 
           <div class="images">
             <div class="row">
-
-              <div class="col-3">
-                <div class="small-image d-flex">
-                  <img src="../../../assets/img/img1.jpg">
-
-                  <img src="../../../assets/img/img1.jpg">
-
-                  <img src="../../../assets/img/img1.jpg">
-
-                  <img src="../../../assets/img/img1.jpg">
-
-                  <img src="../../../assets/img/img1.jpg">
-                </div>
+              <div class="small-image d-flex">
+                <img src="../../../assets/img/img1.jpg">
+                <img src="../../../assets/img/img1.jpg">
+                <img src="../../../assets/img/img1.jpg">
+                <img src="../../../assets/img/img1.jpg">
               </div>
-
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-7">
         <div class="details">
-          <div class="seprator"></div>
-          <h6>0986</h6>
+          <h6 class="seprator">0986</h6>
+          <h1 class="pb-4 pt-2">Shark Brixton</h1>
+
+          <!-- color section  -->
+          <h4 class="pb-2 font-weight-bold">Color:</h4>
+          <div class="colors d-flex">
+            <div class="me-3" *ngFor="let item of colors" (click)="onColorChange(item.name)">
+              <div class="color m-auto" [style.backgroundColor]="item.code" [ngClass]="{'active': item.name == selectedColor}"></div>
+              <p class="pt-2">{{item.name}}</p>
+            </div>
+          </div>
+
+          <!-- size section  -->
+          <h4 class="pb-2 font-weight-bold">Size:</h4>
+          <div class="sizes d-flex">
+            <div class="size me-3"
+              *ngFor="let item of sizes"
+              (click)="onSizeChange(item.name)"
+              [ngClass]="{'active': item.name == selectedSize}"
+            >
+              {{item.name}}
+            </div>
+          </div>
+          <a href="#" class="small-anchor">Size Chart</a>
+
+          <!-- Quantity section  -->
+          <h4 class="font-weight-bold pt-4">Quantity:</h4>
+          <div class="quantity">
+            <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+
+          <!-- price section  -->
+          <h4 class="font-weight-bold pt-4">Price:</h4>
+          <div class="price-area">
+            <span>$</span>
+            <input type="text" placeholder="100">
+          </div>
+
+          <div class="py-5">
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+          </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>

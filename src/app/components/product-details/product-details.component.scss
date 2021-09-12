@@ -4,7 +4,7 @@
   padding: 5% 0;
   .inner{
     img{
-      width: 60%;
+      width: 100%;
       height: auto;
       object-fit: cover;
       object-position: center;
@@ -15,9 +15,10 @@
     }
     .images{
       .small-image{
-        margin-top: 15%;
+        margin-top: 5%;
+        overflow-x: auto;
         img{
-          width: 45%;
+          width: 100px;
           height: auto;
           object-fit: cover;
           object-position: center;
@@ -31,22 +32,91 @@
   }
 
   .details{
-    .seprator:before{
-      content: "";
-      position: absolute;
-      top: 76px;
-      right: 36%;
-      width: 70px;
-      height: 2px;
-      background-color: red;
-      box-shadow: 1px 1px 4px 1px #adadad;
+    padding-left: 100px;
+    @media screen and (max-width: 600px) {
+      padding-left: 0;
+      padding-top: 50px;
     }
-    h6{
-
+    h6 {
+      margin-bottom: 0;
+      font-size: 13px;
+      &.seprator {
+        padding: 0 0 0 85px;
+        position: relative;
+        &:before{
+          content: "";
+          position: absolute;
+          top: 8px;
+          left: 0;
+          width: 75px;
+          height: 2px;
+          background-color: red;
+          box-shadow: 1px 1px 4px 1px #adadad;
+        }
+      }
+    }
+    .colors {
+      p {
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .color {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 30px;
+        border: 3px solid transparent;
+        cursor: pointer;
+        &.active {
+          border: 3px solid #ccc;
+        }
+      }
+    }
+    .sizes {
+      .size {
+        border: 2px solid #ccc;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        cursor: pointer;
+        &.active {
+          border: 2px solid gray
+        }
+      }
+    }
+    .quantity {
+      select {
+        padding: 5px;
+        width: 50%;
+        @media screen and (max-width: 600px) {
+          width: 100%;
+        }
+      }
+    }
+    .price-area {
+      position: relative;
+      span {
+        position: absolute;
+        left: 8px;
+        top: 6px;
+      }
+      input {
+        padding: 5px 5px 5px 20px;
+        width: 50%;
+        @media screen and (max-width: 600px) {
+          width: 100%;
+        }
+      }
     }
   }
 }
 
+.small-anchor {
+  color: #a7a7a7;
+  font-size: 13px;
+  position: relative;
+  top: 5px;
+}
 
 .tab {
   overflow: hidden;
@@ -117,5 +187,10 @@
       font-size: 15px;
       color: #000000;
     }
+  }
+}
+.btn {
+  @media screen and (max-width: 600px) {
+    width: 100%;
   }
 }
