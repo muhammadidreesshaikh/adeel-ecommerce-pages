@@ -4,3 +4,12 @@
         padding-left: 10px;
     }
 }
+
+button {
+    &.btn {
+        .btn-secondary {
+            background-color: #ff0000;
+            border-color: #ff0000;
+        }
+    }
+}
