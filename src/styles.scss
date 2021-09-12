@@ -4,3 +4,21 @@
     background-color: #ff0000;
     border-color: #ff0000;
 }
+
+// scrollbar
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  background: #454d5c;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #eee;
+  -webkit-border-radius: 10px;
+  border-left: 1px #999 #888;
+}
