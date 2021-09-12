@@ -38,3 +38,150 @@
     </div>
   </div>
 </div>
+
+
+<div class="tab">
+    <button class="tablinks" [ngClass]="{'active': selectedTab == 'description'}"
+        (click)="onTabChange('description')">Describtion</button>
+    <button class="tablinks" [ngClass]="{'active': selectedTab == 'compositon'}"
+        (click)="onTabChange('compositon')">Compositon</button>
+    <button class="tablinks" [ngClass]="{'active': selectedTab == 'reviews'}"
+        (click)="onTabChange('reviews')">Reviews</button>
+</div>
+
+<div class="tabcontent" *ngIf="selectedTab == 'description'">
+    <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+        nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
+        illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
+        blandit.
+    </p>
+</div>
+
+<div class="tabcontent" *ngIf="selectedTab == 'compositon'">
+    <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+        nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
+        illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
+        blandit.
+    </p>
+</div>
+
+<div class="tabcontent" *ngIf="selectedTab == 'reviews'">
+    <div class="row review-inner">
+        <div class="col-3 col-md-2 col-lg-1">
+            <h4>4.8</h4>
+        </div>
+
+        <div class="col-9 col-md-10 col-lg-11">
+            <div class="review-star">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="checked">4.8 Rating</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-3 col-md-2 col-lg-1">
+            <div class="left">
+                <span>5 stars</span>
+            </div>
+        </div>
+        <div class="col-7 col-md-8 col-lg-8 px-0">
+            <div class="middel">
+                <div class="progress">
+                    <div class="progress-bar" style="width:90%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 col-md-2 col-lg-1">
+            <div class="right">
+                <span>95%</span>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-3 col-md-2 col-lg-1">
+            <div class="left">
+                <span>4 stars</span>
+            </div>
+        </div>
+        <div class="col-7 col-md-8 col-lg-8 px-0">
+            <div class="middel">
+                <div class="progress">
+                    <div class="progress-bar" style="width:75%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 col-md-2 col-lg-1">
+            <div class="right">
+                <span>75%</span>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-3 col-md-2 col-lg-1">
+            <div class="left">
+                <span>3 stars</span>
+            </div>
+        </div>
+        <div class="col-7 col-md-8 col-lg-8 px-0">
+            <div class="middel">
+                <div class="progress">
+                    <div class="progress-bar" style="width:50%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 col-md-2 col-lg-1">
+            <div class="right">
+                <span>50%</span>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-3 col-md-2 col-lg-1">
+            <div class="left">
+                <span>2 stars</span>
+            </div>
+        </div>
+        <div class="col-7 col-md-8 col-lg-8 px-0">
+            <div class="middel">
+                <div class="progress">
+                    <div class="progress-bar" style="width:25%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 col-md-2 col-lg-1">
+            <div class="right">
+                <span>25%</span>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-3 col-md-2 col-lg-1">
+            <div class="left">
+                <span>1 stars</span>
+            </div>
+        </div>
+        <div class="col-7 col-md-8 col-lg-8 px-0">
+            <div class="middel">
+                <div class="progress">
+                    <div class="progress-bar" style="width:10%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 col-md-2 col-lg-1">
+            <div class="right">
+                <span>10%</span>
+            </div>
+        </div>
+    </div>
+</div>

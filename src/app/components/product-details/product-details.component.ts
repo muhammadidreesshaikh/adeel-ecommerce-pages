@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailsComponent implements OnInit {
 
+  selectedTab: any = "description";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onTabChange(tab: any) {
+    this.selectedTab = tab;
   }
 
 }

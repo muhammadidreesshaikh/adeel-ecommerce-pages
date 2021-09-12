@@ -48,3 +48,74 @@
 }
 
 
+.tab {
+  overflow: hidden;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  button {
+      background-color: inherit;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+      border-bottom: 3px solid #ccc;
+      width: 100%;
+      text-align: start;
+      &.active {
+          border-bottom: 3px solid #000;
+          font-weight: 800;
+      }
+      &:hover {
+          border-bottom: 3px solid #000;
+      }
+  }
+}
+
+.tabcontent {
+  padding: 40px 15px;
+  border-top: none;
+}
+
+.reviews {
+  .review-inner{
+    padding: 10px 0;
+    h4{
+      font-size: 30px;
+      color: orange;
+      font-weight: bold;
+    }
+    span {
+      &.fa-star {
+        padding-right: 5px;
+        font-size: 13px;
+        color: #000000;
+      }
+      &.checked {
+        color: orange;
+      }
+    }
+    p {
+      &.checked {
+        color: #000000;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+  .left {
+    span {
+      font-size: 15px;
+      color: #000000;
+    }
+  }
+  .right {
+    span {
+      float: right;
+      font-size: 15px;
+      color: #000000;
+    }
+  }
+}
